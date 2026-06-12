@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEAN Stack Web Development Course | Maya Academy Kerala</title>
+    <meta name="description"
+        content="Master Full Stack Web Development with MongoDB, Express.js, Angular, and Node.js. Join Maya Academy Kerala under Senior Trainer Karthikapriya R.">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <div class="logo-section">
+                <div class="logo-icon">MA</div>
+                <div>
+                    <div class="logo-text">MAYA ACADEMY</div>
+                    <div class="logo-tag">MEAN Stack Course</div>
+                </div>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle Menu">☰</button>
+                <ul id="navLinks">
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#stack-explorer">The Stack</a></li>
+                    <li><a href="#syllabus">Syllabus</a></li>
+                    <li><a href="#planner">Planner</a></li>
+                    <li><a href="#trainer">Trainer</a></li>
+                    <li><a href="#academy">Why Maya</a></li>
+                    <li><a href="#enroll">Enroll</a></li>
+                </ul>
+            </nav>
+            <button class="enroll-btn-header" onclick="document.getElementById('enroll').scrollIntoView();">Apply
+                Now</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-tagline">
+                    <span class="live-dot"></span>
+                    <span>Kerala's Premium MEAN Stack Course</span>
+                </div>
+                <h1>
+                    <span class="gradient-text">Master Full Stack</span> <br>
+                    <span class="accent-text">MEAN Stack Development</span>
+                </h1>
+                <p class="hero-description">
+                    Empower your career with MongoDB, Express.js, Angular, and Node.js. Learn how to build
+                    production-ready, secure web applications from Kerala's leading academy.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#enroll" class="btn-primary">Start Learning Today</a>
+                    <a href="#syllabus" class="btn-secondary">Explore Syllabus</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>80+</h3>
+                        <p>Hours of Live training</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Placement Support</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>10+</h3>
+                        <p>Hands-on Projects</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="stack-orbit">
+                    <div class="stack-node mongo">M</div>
+                    <div class="stack-node express">E</div>
+                    <div class="stack-node angular">A</div>
+                    <div class="stack-node node">N</div>
+                </div>
+                <div class="stack-center">
+                    <span class="title">MEAN</span>
+                    <span class="subtitle">Full Stack</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEAN Stack Explorer -->
+    <section class="section" id="stack-explorer">
+        <div class="container">
+            <div class="section-header">
+                <h2>The MEAN Stack Ecosystem</h2>
+                <p>Click each technology to explore how it forms the modern JavaScript full stack architecture.</p>
+            </div>
+
+            <div class="mean-grid">
+                <div class="glass-panel mean-card mongo active" onclick="switchStackTab('mongo')">
+                    <div class="card-icon">M</div>
+                    <h3>MongoDB</h3>
+                    <p>NoSQL Document Database</p>
+                </div>
+                <div class="glass-panel mean-card express" onclick="switchStackTab('express')">
+                    <div class="card-icon">E</div>
+                    <h3>Express.js</h3>
+                    <p>Minimalist Web Framework</p>
+                </div>
+                <div class="glass-panel mean-card angular" onclick="switchStackTab('angular')">
+                    <div class="card-icon">A</div>
+                    <h3>Angular</h3>
+                    <p>Enterprise Frontend Framework</p>
+                </div>
+                <div class="glass-panel mean-card nodejs" onclick="switchStackTab('nodejs')">
+                    <div class="card-icon">N</div>
+                    <h3>Node.js</h3>
+                    <p>JavaScript Server Environment</p>
+                </div>
+            </div>
+
+            <div class="glass-panel stack-details-wrapper" style="padding: 40px;">
+                <!-- MongoDB Pane -->
+                <div class="stack-detail-pane mongo-pane active" id="pane-mongo">
+                    <div class="stack-detail-info">
+                        <h3><span class="mongo-text">MongoDB</span> Database</h3>
+                        <p class="lead">Store application data in flexible, JSON-like documents, allowing rapid scaling
+                            and seamless integration with JavaScript backend architectures.</p>
+                        <ul class="features-list mongo-list">
+                            <li>Dynamic document schema modeling with Mongoose</li>
+                            <li>Advanced aggregation framework for complex reporting</li>
+                            <li>Database indexing, query optimization, and security standards</li>
+                            <li>Cloud hosting integration using MongoDB Atlas</li>
+                        </ul>
+                    </div>
+                    <div class="stack-detail-visual">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <div class="code-dot red"></div>
+                                <div class="code-dot yellow"></div>
+                                <div class="code-dot green"></div>
+                                <div class="code-title">user.schema.js</div>
+                            </div>
+                            <div class="code-body">const mongoose = require('mongoose');
+
+                                const userSchema = new mongoose.Schema({
+                                name: { type: String, required: true },
+                                email: { type: String, unique: true },
+                                createdAt: { type: Date, default: Date.now }
+                                });
+
+                                module.exports = mongoose.model('User', userSchema);</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Express Pane -->
+                <div class="stack-detail-pane express-pane" id="pane-express">
+                    <div class="stack-detail-info">
+                        <h3><span class="express-text">Express.js</span> Backend Routing</h3>
+                        <p class="lead">Build robust, lightweight APIs using the popular Node.js web application
+                            framework to handle requests, middleware integrations, and routing.</p>
+                        <ul class="features-list express-list">
+                            <li>RESTful API endpoint design and controller mapping</li>
+                            <li>Robust custom middleware design for security & verification</li>
+                            <li>Request parsing, status handling, and HTTP error management</li>
+                            <li>JWT authentication integrations</li>
+                        </ul>
+                    </div>
+                    <div class="stack-detail-visual">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <div class="code-dot red"></div>
+                                <div class="code-dot yellow"></div>
+                                <div class="code-dot green"></div>
+                                <div class="code-title">server.js</div>
+                            </div>
+                            <div class="code-body">const express = require('express');
+                                const app = express();
+
+                                app.use(express.json());
+
+                                app.get('/api/courses', (req, res) => {
+                                res.json({ title: 'MEAN Stack Course' });
+                                });
+
+                                app.listen(3000, () => console.log('Listening...'));</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Angular Pane -->
+                <div class="stack-detail-pane angular-pane" id="pane-angular">
+                    <div class="stack-detail-info">
+                        <h3><span class="angular-text">Angular</span> Single Page Apps</h3>
+                        <p class="lead">Create dynamic, structured client-side web applications using Google's powerful
+                            enterprise framework featuring TypeScript, modular routing, and reactive forms.</p>
+                        <ul class="features-list angular-list">
+                            <li>Component-driven architecture and lifecycle hooks</li>
+                            <li>Dependency injection and API state services</li>
+                            <li>Reactive Form Validation and state management</li>
+                            <li>Router guards for dashboard security and admin areas</li>
+                        </ul>
+                    </div>
+                    <div class="stack-detail-visual">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <div class="code-dot red"></div>
+                                <div class="code-dot yellow"></div>
+                                <div class="code-dot green"></div>
+                                <div class="code-title">course.component.ts</div>
+                            </div>
+                            <div class="code-body">@Component({
+                                selector: 'app-course',
+                                template: `&lt;h1&gt;{{ title }}&lt;/h1&gt;`
+                                })
+                                export class CourseComponent {
+                                title = 'MEAN Stack at Maya Academy';
+                                }</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nodejs Pane -->
+                <div class="stack-detail-pane nodejs-pane" id="pane-nodejs">
+                    <div class="stack-detail-info">
+                        <h3><span class="nodejs-text">Node.js</span> Server Environment</h3>
+                        <p class="lead">Execute JavaScript on the server side using the V8 engine to build fast,
+                            scalable, and non-blocking event-driven web applications.</p>
+                        <ul class="features-list nodejs-list">
+                            <li>Event Loop, asynchronous programming patterns, and promises</li>
+                            <li>Core NPM registry packages and dependency controls</li>
+                            <li>File systems manipulation and secure stream handling</li>
+                            <li>Multi-environment build scripts and live configurations</li>
+                        </ul>
+                    </div>
+                    <div class="stack-detail-visual">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <div class="code-dot red"></div>
+                                <div class="code-dot yellow"></div>
+                                <div class="code-dot green"></div>
+                                <div class="code-title">app.js</div>
+                            </div>
+                            <div class="code-body">const fs = require('fs');
+
+                                fs.readFile('syllabus.json', 'utf-8', (err, data) => {
+                                if (err) throw err;
+                                const course = JSON.parse(data);
+                                console.log(`Loading syllabus for: ${course.name}`);
+                                });</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Course Syllabus & Search -->
+    <section class="section" id="syllabus">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore the Curriculum</h2>
+                <p>Search topics instantly to view where they appear inside the MEAN Stack curriculum.</p>
+            </div>
+
+            <div class="search-wrapper">
+                <svg class="search-icon-svg" viewBox="0 0 24 24">
+                    <path
+                        d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+                <input type="text" id="syllabusSearch" class="search-input"
+                    placeholder="Search topics (e.g., JWT, routing, Mongo, components)..." oninput="filterSyllabus()">
+            </div>
+
+            <div class="syllabus-accordion" id="syllabusList">
+
+                <!-- Module 1 -->
+                <div class="glass-panel syllabus-item open"
+                    data-tags="setup node script html web environment modular modules npm">
+                    <div class="syllabus-header" onclick="toggleSyllabus(this)">
+                        <div class="syllabus-title-group">
+                            <span class="syllabus-num">01</span>
+                            <h3>Node.js Fundamentals & Web Server Setup</h3>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span class="syllabus-tag nodejs">NodeJS</span>
+                            <span class="syllabus-arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="syllabus-content">
+                        <div class="syllabus-inner">
+                            <div class="topic-list">
+                                <div class="topic-item">Introduction to Full Stack JS Architecture</div>
+                                <div class="topic-item">Asynchronous JavaScript & Event Loop</div>
+                                <div class="topic-item">Node.js Core Modules (HTTP, FS, Path)</div>
+                                <div class="topic-item">NPM Package Ecosystem & package.json</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="glass-panel syllabus-item"
+                    data-tags="express restful api crud routing middleware request parameters headers postman">
+                    <div class="syllabus-header" onclick="toggleSyllabus(this)">
+                        <div class="syllabus-title-group">
+                            <span class="syllabus-num">02</span>
+                            <h3>Restful APIs with Express.js</h3>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span class="syllabus-tag express">Express</span>
+                            <span class="syllabus-arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="syllabus-content">
+                        <div class="syllabus-inner">
+                            <div class="topic-list">
+                                <div class="topic-item">Creating an Express Web Server</div>
+                                <div class="topic-item">Routing parameters and Request queries</div>
+                                <div class="topic-item">Building custom middlewares & logging</div>
+                                <div class="topic-item">Error handling mechanisms in API design</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="glass-panel syllabus-item"
+                    data-tags="mongodb nosql database mongoose queries schema index aggregate cluster atlas connection">
+                    <div class="syllabus-header" onclick="toggleSyllabus(this)">
+                        <div class="syllabus-title-group">
+                            <span class="syllabus-num">03</span>
+                            <h3>Data Modeling with MongoDB & Mongoose</h3>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span class="syllabus-tag mongo">MongoDB</span>
+                            <span class="syllabus-arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="syllabus-content">
+                        <div class="syllabus-inner">
+                            <div class="topic-list">
+                                <div class="topic-item">NoSQL Documents vs Relational Databases</div>
+                                <div class="topic-item">Creating Database Models with Mongoose Schemas</div>
+                                <div class="topic-item">Performing CRUD queries and index creation</div>
+                                <div class="topic-item">Database relationships (Embed vs Populate)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="glass-panel syllabus-item"
+                    data-tags="angular component templates directives data binding interpolation dynamic styles input output typescript ts cli">
+                    <div class="syllabus-header" onclick="toggleSyllabus(this)">
+                        <div class="syllabus-title-group">
+                            <span class="syllabus-num">04</span>
+                            <h3>Angular Framework Architecture</h3>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span class="syllabus-tag angular">Angular</span>
+                            <span class="syllabus-arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="syllabus-content">
+                        <div class="syllabus-inner">
+                            <div class="topic-list">
+                                <div class="topic-item">Angular CLI & Project Scaffolding</div>
+                                <div class="topic-item">TypeScript foundations (Classes, Interfaces)</div>
+                                <div class="topic-item">Angular Components & Templates</div>
+                                <div class="topic-item">Data binding (Property, Event, Two-way)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="glass-panel syllabus-item"
+                    data-tags="rxjs services state http client routing router guards modules authentication lazy loading">
+                    <div class="syllabus-header" onclick="toggleSyllabus(this)">
+                        <div class="syllabus-title-group">
+                            <span class="syllabus-num">05</span>
+                            <h3>Advanced Angular Features</h3>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span class="syllabus-tag angular">Angular</span>
+                            <span class="syllabus-arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="syllabus-content">
+                        <div class="syllabus-inner">
+                            <div class="topic-list">
+                                <div class="topic-item">Reactive Forms & validations</div>
+                                <div class="topic-item">Angular HTTP Services & RxJS Observables</div>
+                                <div class="topic-item">Single Page routing & parameters</div>
+                                <div class="topic-item">Route guards & Lazy-loaded modules</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="glass-panel syllabus-item"
+                    data-tags="jwt security cors integration fullstack cookies localstorage header project validation session">
+                    <div class="syllabus-header" onclick="toggleSyllabus(this)">
+                        <div class="syllabus-title-group">
+                            <span class="syllabus-num">06</span>
+                            <h3>JWT Authentication & Full Stack Integration</h3>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span class="syllabus-tag nodejs">NodeJS</span>
+                            <span class="syllabus-arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="syllabus-content">
+                        <div class="syllabus-inner">
+                            <div class="topic-list">
+                                <div class="topic-item">JWT authentication architecture</div>
+                                <div class="topic-item">Connecting Angular HTTP Client to Express REST APIs</div>
+                                <div class="topic-item">HTTP Interceptors for JWT inclusion</div>
+                                <div class="topic-item">CORS configuration and secure cookie transport</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Course Schedule Planner -->
+    <section class="section" id="planner">
+        <div class="container">
+            <div class="section-header">
+                <h2>Interactive Course Planner</h2>
+                <p>Adjust the slider to discover your expected course completion speed based on your availability.</p>
+            </div>
+
+            <div class="glass-panel planner-card">
+                <div class="planner-grid">
+                    <div class="planner-controls">
+                        <h3>Study Pace Customizer</h3>
+                        <p>Calculate your course load and view milestones mapped dynamically to your study plan.</p>
+
+                        <div class="slider-group">
+                            <label for="weeklyHours">
+                                <span>Weekly Commited Hours</span>
+                                <span class="highlight-value" id="hoursVal">10 hours</span>
+                            </label>
+                            <input type="range" id="weeklyHours" class="range-slider" min="5" max="30" value="10"
+                                step="1" oninput="calculateTimeline()">
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 24px;">
+                            <label>Prior Programming Level</label>
+                            <div class="radio-group">
+                                <div class="radio-card selected" onclick="selectExperience(this, 'beginner')">
+                                    <input type="radio" name="exp" id="exp-beg" checked>
+                                    <h4>Beginner</h4>
+                                    <p>Standard learning rate</p>
+                                </div>
+                                <div class="radio-card" onclick="selectExperience(this, 'experienced')">
+                                    <input type="radio" name="exp" id="exp-exp">
+                                    <h4>Some Experience</h4>
+                                    <p>25% faster track</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="planner-results">
+                        <div>
+                            <div class="result-row-grid">
+                                <div class="result-card accent">
+                                    <h5>Estimated Duration</h5>
+                                    <span class="value" id="resWeeks">8 Weeks</span>
+                                </div>
+                                <div class="result-card">
+                                    <h5>Graduation Target</h5>
+                                    <span class="value" id="resDate">Aug 2026</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-milestones">
+                            <h4>Course Progression Milestones</h4>
+                            <div class="milestones-list" id="milestonesList">
+                                <!-- Milestones populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainer Profiles Section -->
+    <section class="section" id="trainer">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Expert Instruction</h2>
+                <p>Learn from experienced developers and industry experts dedicated to your progress.</p>
+            </div>
+
+            <div class="glass-panel trainer-card">
+                <div class="trainer-grid">
+                    <div class="trainer-image-container">
+                        <div class="trainer-avatar-fallback">
+                            <span class="initials">KR</span>
+                            <span class="role">Maya Academy</span>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>KARTHIKAPRIYA R</h3>
+                        <span class="trainer-title">Senior Trainer | Maya Academy Kerala</span>
+                        <p class="trainer-bio">
+                            Karthikapriya is a renowned technical consultant and senior full stack educator. With
+                            credentials spanning Cyber Security, python engineering, and full stack JavaScript design,
+                            she specializes in guiding engineering candidates to professional competence. Her classes
+                            feature comprehensive live labs and dynamic application challenges.
+                        </p>
+
+                        <div class="skills-wrapper">
+                            <div class="skill-bar-group">
+                                <div class="skill-bar-header">
+                                    <span>Angular & TypeScript</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" style="width: 95%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-bar-group">
+                                <div class="skill-bar-header">
+                                    <span>NodeJS & API Design</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" style="width: 90%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-bar-group">
+                                <div class="skill-bar-header">
+                                    <span>Database Architecture (MongoDB)</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar-outer">
+                                    <div class="skill-bar-inner" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maya Academy Highlight -->
+    <section class="section" id="academy">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Maya Academy Kerala?</h2>
+                <p>Located in the heart of Kerala, we offer industry-standard training with modern infrastructure.</p>
+            </div>
+
+            <div class="academy-grid">
+                <div class="glass-panel academy-card">
+                    <div class="academy-icon">📍</div>
+                    <h3>Prime Kerala Location</h3>
+                    <p>Access our fully equipped training labs with advanced workspaces and dedicated mentors.</p>
+                </div>
+                <div class="glass-panel academy-card">
+                    <div class="academy-icon">💼</div>
+                    <h3>Placement Ecosystem</h3>
+                    <p>Receive comprehensive mock interviews, resume refinement programs, and direct referrals.</p>
+                </div>
+                <div class="glass-panel academy-card">
+                    <div class="academy-icon">🎓</div>
+                    <h3>Official Credentials</h3>
+                    <p>Earn standard certifications validating your mastery of NoSQL, Node services, and SPAs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment Portal and Database Mockup -->
+    <section class="section" id="enroll">
+        <div class="container">
+            <div class="section-header">
+                <h2>Admissions & Course Inquiries</h2>
+                <p>Register your interest in the upcoming MEAN stack batch. All entries log instantly into our local
+                    inquiry log database.</p>
+            </div>
+
+            <div class="enrollment-grid">
+                <!-- Enrollment Form -->
+                <div class="glass-panel enrollment-form-container">
+                    <h3>Inquiry Form</h3>
+                    <p class="desc">Fill out the fields to submit an inquiry.</p>
+
+                    <form id="enrollmentForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" class="form-control" placeholder="e.g., Joy Paul">
+                            <div class="form-error" id="nameError">Name is required (at least 3 characters)</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailAddr">Email Address</label>
+                            <input type="email" id="emailAddr" class="form-control" placeholder="e.g., joy@example.com">
+                            <div class="form-error" id="emailError">Please enter a valid email address</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phoneNum">Phone Number</label>
+                            <input type="tel" id="phoneNum" class="form-control" placeholder="e.g., +91 9876543210">
+                            <div class="form-error" id="phoneError">Please enter a valid 10-digit phone number</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="startDate">Preferred Start</label>
+                            <input type="date" id="startDate" class="form-control">
+                            <div class="form-error" id="dateError">Please pick a future start date</div>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Submit Registration</button>
+                    </form>
+                </div>
+
+                <!-- Database View Log -->
+                <div class="glass-panel db-log-container">
+                    <div class="db-log-header">
+                        <h3>
+                            <span class="db-status-dot"></span>
+                            <span>Inquiry Database Log (Local)</span>
+                        </h3>
+                        <button class="btn-clear-db" onclick="clearInquiries()">Clear Log</button>
+                    </div>
+
+                    <div class="db-table-wrapper">
+                        <div class="db-placeholder" id="dbPlaceholder">
+                            No active inquiries logged. Fill the form to insert database records.
+                        </div>
+                        <table class="db-table" id="dbTable">
+                            <thead>
+                                <tr>
+                                    <th>Timestamp</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Preferred Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dbBody">
+                                <!-- Dynamic entries go here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Overlay -->
+    <div class="modal-overlay" id="successModal">
+        <div class="glass-panel modal-card">
+            <div class="modal-icon">✓</div>
+            <h3>Registration Logged Successfully!</h3>
+            <p>Your details have been successfully written to the local database view. Our representative from Maya
+                Academy Kerala will contact you shortly.</p>
+            <button class="btn-modal-close" onclick="closeModal()">Return to Portal</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>MAYA ACADEMY</h3>
+                    <p>Leading education hub in Kerala specializing in premium full stack web engineering, software
+                        design, and cyber security certificates.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>The Stack</h4>
+                    <ul>
+                        <li><a href="#stack-explorer" onclick="switchStackTab('mongo')">MongoDB Database</a></li>
+                        <li><a href="#stack-explorer" onclick="switchStackTab('express')">Express REST Services</a></li>
+                        <li><a href="#stack-explorer" onclick="switchStackTab('angular')">Angular Web Frontends</a></li>
+                        <li><a href="#stack-explorer" onclick="switchStackTab('nodejs')">NodeJS Servers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Course Resources</h4>
+                    <ul>
+                        <li><a href="#syllabus">Topic Syllabus</a></li>
+                        <li><a href="#planner">Syllabus Planner Widget</a></li>
+                        <li><a href="#trainer">Karthikapriya R</a></li>
+                        <li><a href="#enroll">Apply for Batches</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maya Academy Kerala. All rights reserved.</p>
+                <p>Instructor: Karthikapriya R (Senior Trainer)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Logic Script -->
+    <script>
+        // Track Scroll Header State
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Highlight current navbar items
+            const sections = document.querySelectorAll('section');
+            const navItems = document.querySelectorAll('nav a');
+            let currentSec = 'hero';
+
+            sections.forEach(sec => {
+                const top = sec.offsetTop - 120;
+                if (window.scrollY >= top) {
+                    currentSec = sec.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${currentSec}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Mobile Nav Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        navLinks.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                navLinks.classList.remove('active');
+                menuToggle.textContent = '☰';
+            }
+        });
+
+        // Stack tab switcher
+        function switchStackTab(tech) {
+            // Cards
+            document.querySelectorAll('.mean-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            const activeCard = document.querySelector(`.mean-card.${tech}`);
+            if (activeCard) activeCard.classList.add('active');
+
+            // Panes
+            document.querySelectorAll('.stack-detail-pane').forEach(pane => {
+                pane.classList.remove('active');
+            });
+            const activePane = document.getElementById(`pane-${tech}`);
+            if (activePane) activePane.classList.add('active');
+        }
+
+        // Syllabus filters
+        function filterSyllabus() {
+            const query = document.getElementById('syllabusSearch').value.toLowerCase().trim();
+            const items = document.querySelectorAll('.syllabus-item');
+
+            items.forEach(item => {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const tags = item.getAttribute('data-tags').toLowerCase();
+                const bulletElements = item.querySelectorAll('.topic-item');
+                let bulletMatch = false;
+
+                bulletElements.forEach(bullet => {
+                    const text = bullet.textContent.toLowerCase();
+                    if (query && text.includes(query)) {
+                        bullet.style.color = '#8b5cf6'; // Highlight matched bullet point
+                        bullet.style.fontWeight = '600';
+                        bulletMatch = true;
+                    } else {
+                        bullet.style.color = '';
+                        bullet.style.fontWeight = '';
+                    }
+                });
+
+                if (query === '') {
+                    item.style.display = '';
+                    item.classList.remove('highlight');
+                    // Collapse modules back to default (only module 1 open)
+                    if (item.querySelector('.syllabus-num').textContent === '01') {
+                        item.classList.add('open');
+                    } else {
+                        item.classList.remove('open');
+                    }
+                } else if (title.includes(query) || tags.includes(query) || bulletMatch) {
+                    item.style.display = '';
+                    item.classList.add('open');
+                    item.classList.add('highlight');
+                } else {
+                    item.style.display = 'none';
+                    item.classList.remove('open');
+                    item.classList.remove('highlight');
+                }
+            });
+        }
+
+        // Accordion expand/collapse
+        function toggleSyllabus(header) {
+            const item = header.parentElement;
+            const isOpen = item.classList.contains('open');
+
+            // Toggle clicked item
+            if (isOpen) {
+                item.classList.remove('open');
+            } else {
+                item.classList.add('open');
+            }
+        }
+
+        // Planner Calculator
+        let userExperience = 'beginner';
+
+        function selectExperience(element, expType) {
+            document.querySelectorAll('.radio-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            element.classList.add('selected');
+            element.querySelector('input').checked = true;
+            userExperience = expType;
+            calculateTimeline();
+        }
+
+        function calculateTimeline() {
+            const hoursVal = document.getElementById('weeklyHours').value;
+            document.getElementById('hoursVal').textContent = `${hoursVal} hours`;
+
+            // Total standard estimated effort is 80 hours of curriculum
+            const totalHours = 80;
+            let speedMultiplier = 1.0;
+
+            if (userExperience === 'experienced') {
+                speedMultiplier = 0.75; // 25% faster
+            }
+
+            const weeksNeeded = Math.ceil((totalHours * speedMultiplier) / hoursVal);
+            document.getElementById('resWeeks').textContent = `${weeksNeeded} Weeks`;
+
+            // Calculate end date based on local time
+            const now = new Date();
+            now.setDate(now.getDate() + (weeksNeeded * 7));
+            const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            document.getElementById('resDate').textContent = `${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+
+            // Populate Dynamic Milestones based on pace
+            const milestoneList = document.getElementById('milestonesList');
+            milestoneList.innerHTML = '';
+
+            const milestoneSpecs = [
+                { fraction: 0.2, title: "NodeJS Server Foundations" },
+                { fraction: 0.4, title: "Express RESTful APIs" },
+                { fraction: 0.6, title: "MongoDB Schemas & Integrations" },
+                { fraction: 0.8, title: "Angular Frontend Setup & Services" },
+                { fraction: 1.0, title: "Full Integration & Live Project Review" }
+            ];
+
+            milestoneSpecs.forEach(milestone => {
+                const targetWeek = Math.ceil(weeksNeeded * milestone.fraction);
+                const isCompleted = targetWeek <= (weeksNeeded / 2); // mockup status
+
+                const node = document.createElement('div');
+                node.className = `milestone-node ${isCompleted ? 'completed' : ''}`;
+                node.innerHTML = `<span class="week">Week ${targetWeek}:</span><span class="title">${milestone.title}</span>`;
+                milestoneList.appendChild(node);
+            });
+        }
+
+        // Initialize planner on page load
+        calculateTimeline();
+
+        // Date input default validation logic
+        const dateInput = document.getElementById('startDate');
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const yyyy = tomorrow.getFullYear();
+        const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+        const dd = String(tomorrow.getDate()).padStart(2, '0');
+        dateInput.min = `${yyyy}-${mm}-${dd}`;
+        dateInput.value = `${yyyy}-${mm}-${dd}`;
+
+        // Enrollment Database Log Implementation
+        const inquiriesKey = 'maya_academy_mean_inquiries';
+
+        function loadInquiries() {
+            const dataStr = localStorage.getItem(inquiriesKey);
+            const list = dataStr ? JSON.parse(dataStr) : [];
+
+            const placeholder = document.getElementById('dbPlaceholder');
+            const table = document.getElementById('dbTable');
+            const body = document.getElementById('dbBody');
+
+            body.innerHTML = '';
+
+            if (list.length === 0) {
+                placeholder.style.display = 'block';
+                table.style.display = 'none';
+            } else {
+                placeholder.style.display = 'none';
+                table.style.display = 'table';
+
+                list.forEach(item => {
+                    const row = document.createElement('tr');
+
+                    const timeCell = document.createElement('td');
+                    timeCell.textContent = item.time;
+                    timeCell.style.color = 'var(--text-muted)';
+
+                    const nameCell = document.createElement('td');
+                    nameCell.textContent = item.name;
+                    nameCell.style.fontWeight = '600';
+
+                    const emailCell = document.createElement('td');
+                    emailCell.textContent = item.email;
+
+                    const phoneCell = document.createElement('td');
+                    phoneCell.textContent = item.phone;
+
+                    const dateCell = document.createElement('td');
+                    dateCell.textContent = item.date;
+
+                    row.appendChild(timeCell);
+                    row.appendChild(nameCell);
+                    row.appendChild(emailCell);
+                    row.appendChild(phoneCell);
+                    row.appendChild(dateCell);
+
+                    body.appendChild(row);
+                });
+            }
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('emailAddr').value.trim();
+            const phone = document.getElementById('phoneNum').value.trim();
+            const date = document.getElementById('startDate').value;
+
+            let isValid = true;
+
+            // Name validation
+            if (name.length < 3) {
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('nameError').style.display = 'none';
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+            }
+
+            // Phone validation
+            const phoneRegex = /^\+?[0-9\s-]{10,15}$/;
+            if (!phoneRegex.test(phone)) {
+                document.getElementById('phoneError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('phoneError').style.display = 'none';
+            }
+
+            // Date validation
+            if (!date) {
+                document.getElementById('dateError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('dateError').style.display = 'none';
+            }
+
+            if (!isValid) return;
+
+            // Save to database
+            const dataStr = localStorage.getItem(inquiriesKey);
+            const list = dataStr ? JSON.parse(dataStr) : [];
+
+            const dateObj = new Date();
+            const timestamp = `${dateObj.getHours().toString().padStart(2, '0')}:${dateObj.getMinutes().toString().padStart(2, '0')}:${dateObj.getSeconds().toString().padStart(2, '0')}`;
+
+            list.unshift({
+                time: timestamp,
+                name: name,
+                email: email,
+                phone: phone,
+                date: date
+            });
+
+            localStorage.setItem(inquiriesKey, JSON.stringify(list));
+
+            // Refresh DB View
+            loadInquiries();
+
+            // Trigger Modal
+            document.getElementById('successModal').classList.add('active');
+
+            // Reset Form
+            document.getElementById('enrollmentForm').reset();
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').classList.remove('active');
+        }
+
+        function clearInquiries() {
+            localStorage.removeItem(inquiriesKey);
+            loadInquiries();
+        }
+
+        // Initialize inquiries DB view
+        loadInquiries();
+    </script>
+</body>
+
+</html>

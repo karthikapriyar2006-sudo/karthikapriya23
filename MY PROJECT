@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" name="name" id="name">
+        <button on click="submit ()">submit</button>
+        <script>
+            function submit()
+            {
+                
+        </script>
